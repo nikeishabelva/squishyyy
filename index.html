@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squishyy — Cute Squishy Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">squish<span>yy</span> ♡</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Squishy</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="cart-btn" onclick="showCart()">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">♡ SOFT • CUTE • SQUISHY ♡</p>
+        <h1>Temukan squishy<br><span>favoritmu!</span></h1>
+        <p class="hero-desc">Squishy super lembut dan menggemaskan untuk teman santai, koleksi, atau hadiah untuk orang tersayang. ✨</p>
+        <a class="primary-btn" href="#products">Lihat Koleksi →</a>
+      </div>
+      <div class="hero-art">
+        <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div>
+        <div class="squishy-face big">🍓</div>
+        <div class="mini-bubble b1">♡</div><div class="mini-bubble b2">✦</div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Squishy pilihan ♡</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="small">Kecil</button>
+          <button class="filter" data-filter="large">Besar</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="why">
+      <div class="why-card"><span>☁️</span><h3>Super Lembut</h3><p>Tekstur slow-rising yang bikin susah berhenti meremas.</p></div>
+      <div class="why-card"><span>🎀</span><h3>Packaging Cute</h3><p>Dikemas manis dan siap diberikan sebagai hadiah.</p></div>
+      <div class="why-card"><span>💗</span><h3>Happy Guarantee</h3><p>Kami ingin setiap squishy membawa senyum untukmu.</p></div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="center-heading">
+        <p class="eyebrow">CUSTOMER LOVE</p>
+        <h2>Kata pelanggan ♡</h2>
+        <p>Mereka sudah coba squishy kami. Sekarang giliran kamu!</p>
+      </div>
+      <div class="review-grid">
+        <article class="review"><div class="stars">★★★★★</div><p>“Gemes banget! Teksturnya lembut dan packaging-nya super cute. Jadi pengen koleksi semua!”</p><strong>— Aurel, Jakarta</strong></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“Squishy besarnya ternyata nyaman banget dipeluk. Warnanya juga cantik sesuai foto.”</p><strong>— Naya, Bandung</strong></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“Aku beli yang kecil buat hadiah, ternyata temanku suka banget. Lucu pol!”</p><strong>— Caca, Surabaya</strong></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="eyebrow">ABOUT SQUISHYY</p>
+        <h2>Small things,<br><span>big happiness.</span></h2>
+      </div>
+      <p>Squishyy adalah toko squishy dengan misi sederhana: menghadirkan benda kecil yang bikin hari terasa lebih happy. Pilih squishy kecil untuk dibawa ke mana-mana, atau yang besar untuk dipeluk di rumah. ♡</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">squish<span>yy</span> ♡</div>
+    <p>Made with pink & lots of love ✿</p>
+    <p>© 2026 Squishyy. All rights reserved.</p>
+  </footer>
+
+  <div class="toast" id="toast">Ditambahkan ke keranjang ♡</div>
+  <div class="modal" id="cartModal">
+    <div class="modal-box">
+      <button class="close" onclick="closeCart()">×</button>
+      <h2>Keranjangmu 🛒</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total">Total <strong id="cartTotal">Rp0</strong></div>
+      <button class="primary-btn checkout" onclick="checkout()">Checkout via WhatsApp</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
